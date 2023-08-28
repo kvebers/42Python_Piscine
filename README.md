@@ -15,3 +15,10 @@
 
 ###### install comand for fancyer librarys python 3.10 -m pip install time
 ###### defult start time of time is 1970, 01, 01 or time 0 f can be used for form
+
+### Day00 ex02
+
+###### Command [in] is amazing example line:    elif printable in ["list", "tuple", "set", "dict"]:
+
+###### printable[0].upper() + printable[1:] 
+###### the [1:] would acces the rest of the elements of the array in this case
