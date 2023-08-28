@@ -30,7 +30,18 @@
 
 ### Day00 ex04
 
-### Day00 ex05 2 diffrent types of input taking
+Input comprehension from argv
 
-### Day00 ex06 Creates a new list of elements that corespond to the function data
+### Day00 ex05 
+
+2 diffrent types of input taking
+
+### Day00 ex06 
+
+Creates a new list of elements that corespond to the function data
+Iteration trought the list of args, manipulation with this args with preselected functions lambda
+
+### Day00 ex07
+
+So not all data types you can opperate in similar manner, but is is super easy go from 1 data type to another in this case from the dict or map to the string
 
