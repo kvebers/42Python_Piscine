@@ -30,3 +30,7 @@
 
 ### Day00 ex04
 
+### Day00 ex05 2 diffrent types of input taking
+
+### Day00 ex06 Creates a new list of elements that corespond to the function data
+
