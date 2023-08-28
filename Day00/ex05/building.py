@@ -16,11 +16,16 @@ def main():
     puncts = 0
     spaces = 0
     digits = 0
+    text = ""
     if len(sys.argv) > 2:
         raise AssertionError(" incorrect ammount of arguments")
         return 1
-    elif (sys.argv == 1):
-        text = input("Your input here : ")
+    elif len(sys.argv) == 1:
+        try:
+            text = input("Your input here?\n")
+            text += "\n"
+        except EOFError:
+            pass
     else:
         text = sys.argv[1]
 
@@ -28,7 +33,7 @@ def main():
         totalChars += 1
         if char.isdigit():
             digits += 1
-        elif char == " " or char == "   ":
+        elif char == " " or char == "   " or char == "\n":
             spaces += 1
         elif char.isalpha() and char.isupper():
             upperCase += 1
@@ -52,4 +57,3 @@ if __name__ == "__main__":
         exit(main())
     except AssertionError as error:
         print(AssertionError.__name__ + ":" + str(error))
-
