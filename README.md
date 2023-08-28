@@ -45,3 +45,6 @@ Iteration trought the list of args, manipulation with this args with preselected
 
 So not all data types you can opperate in similar manner, but is is super easy go from 1 data type to another in this case from the dict or map to the string
 
+### Day00 ex08
+
+Recreated the ft_tqdm, static variables in context of C and yield return for updates
