@@ -22,3 +22,11 @@
 
 ###### printable[0].upper() + printable[1:] 
 ###### the [1:] would acces the rest of the elements of the array in this case
+
+###### Importint your functions from other file happens like this [from NULL_not_found import NULL_not_found]
+
+
+### Day00 ex03 the same thing as previous execerise
+
+### Day00 ex04
+
