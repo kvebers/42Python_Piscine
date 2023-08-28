@@ -12,5 +12,5 @@ def ft_tqdm(lst: range) -> None:
         bar = "▓" * progress + " " + " " * (100 - progress)
         if progress == 100:
             bar = "▓" * progress
-        print(f"{progress}%|{bar}| {number}/{total} + \r")
+        print(f"{progress}%|{bar}| {number}/{total}  \r")
         yield elem
