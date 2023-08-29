@@ -16,3 +16,4 @@ def ft_load(path: str) -> np.ndarray:
         print(f"An error occurred: {e}")
     except AssertionError as error:
         print(AssertionError.__name__ + ":" + str(error))
+    return

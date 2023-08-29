@@ -21,3 +21,4 @@ def slice_me(family: list, start: int, end: int) -> list:
         return newFamily
     except AssertionError as error:
         print(AssertionError.__name__ + ":" + str(error))
+    return
