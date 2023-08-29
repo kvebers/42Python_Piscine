@@ -31,6 +31,11 @@ def main():
         ax.set_title("Zoomed and Scaled Image")
         ax.set_xlabel("X Axis")
         ax.set_ylabel("Y Axis")
+        """
+        I honestly do not know what they are asking here to print, but supposedly that is this
+        """
+        grayscale_image = newImage.convert("L")
+        print(f"Grayscale pixel content:\n{np.array(grayscale_image)}")
         newImage.show()
         image.show()
         plt.show()
