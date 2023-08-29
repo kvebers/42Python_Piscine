@@ -1,5 +1,6 @@
 from load_image import ft_load
-from pimp_image import ft_blue, ft_red, ft_green, ft_invert, ft_grey, ft_grey_smooth
+from pimp_image import ft_blue, ft_red, ft_green
+from pimp_image import ft_invert, ft_grey, ft_grey_smooth
 import numpy as np
 from PIL import Image, ImageDraw, ImageFont
 
