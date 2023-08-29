@@ -81,4 +81,7 @@ Rotation of the image
 
 ### Day01 ex05
 
-editing the image according to the norms of the code
+Editing the color values of the image, we acces the array of the images and we modif the values in this array
+
+[:, :, 0] = 0 this indicates if we want to select rows, colums or arrays
+
