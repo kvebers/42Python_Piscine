@@ -1,9 +1,7 @@
 import numpy as np
 from PIL import Image
 
-"""
-LOADS THE IMAGE TAKES IMAGE STR AS PATH AND THEN DISPLAYS RANDOM INFORMATION ABOUT IT
-"""
+
 def ft_load(path: str) -> np.ndarray:
     try:
         image = Image.open(path)

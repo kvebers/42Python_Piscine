@@ -1,3 +1,6 @@
+"""
+Calculates the BMI of the person list
+"""
 def give_bmi(height: list[int | float], weight: list[int | float]) -> list[int | float]:
     try:
         if (len(height) != len(weight)):
@@ -14,7 +17,12 @@ def give_bmi(height: list[int | float], weight: list[int | float]) -> list[int |
         return bmi
     except AssertionError as error:
         print(AssertionError.__name__ + ":" + str(error))
-    
+    return []
+
+
+"""
+Check if the person is in the heatlh range or unhealth one
+"""
 def apply_limit(bmi: list[int | float], limit: int) -> list[bool]:
     try:
         for each in bmi:
@@ -29,4 +37,4 @@ def apply_limit(bmi: list[int | float], limit: int) -> list[bool]:
         return over
     except AssertionError as error:
         print(AssertionError.__name__ + ":" + str(error))
-    return
+    return []

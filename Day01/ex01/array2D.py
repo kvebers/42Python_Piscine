@@ -1,3 +1,6 @@
+"""
+DEVIDS THE ARRAY OF ELEMENTS IN HALF, A LOT OF ERROR HANDLING
+"""
 def slice_me(family: list, start: int, end: int) -> list:
     try:
         if (len(family) == 0):
