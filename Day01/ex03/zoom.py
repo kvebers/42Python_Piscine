@@ -10,7 +10,6 @@ def zoom_image(image: Image):
     width, height = image.size
     zoomed_image = image.crop((width / 4, height / 4, width / 4 * 3, height / 4 * 3))
     scaled_image = zoomed_image.resize((2 * zoomed_image.width, 2 * zoomed_image.height))
-    
     return scaled_image
 
 def main():
@@ -34,8 +33,14 @@ def main():
         """
         I honestly do not know what they are asking here to print, but supposedly that is this
         """
+        print("This thing...")
         grayscale_image = newImage.convert("L")
-        print(f"Grayscale pixel content:\n{np.array(grayscale_image)}")
+        grayscale_image_data = np.array(grayscale_image.getdata())
+        for pixel_value in grayscale_image_data[:3]:
+            print(f"[{pixel_value}]")
+        print("...")
+        for pixel_value in grayscale_image_data[-3:]:
+            print(f"[{pixel_value}]")
         newImage.show()
         image.show()
         plt.show()
