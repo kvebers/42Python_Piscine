@@ -5,6 +5,8 @@
 
 # Notes
 
+## Day00
+
 ### Day00 ex00
 
 ##### Each of the datatypes are definied in decleration of the variable not by the define of the variable, set dose not have any particular order tuple is const variable list lift is a list and dict corresponds is similar as C++ map
@@ -48,3 +50,15 @@ So not all data types you can opperate in similar manner, but is is super easy g
 ### Day00 ex08
 
 Recreated the ft_tqdm, static variables in context of C and yield return for updates
+
+
+### Day00 ex09
+
+Too Boring to Do
+
+
+## Day01
+
+### Day01 ex00
+
+ls

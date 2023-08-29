@@ -1,7 +1,6 @@
 import sys
 
 
-
 """
 Takes the elements itterates trought the list of elements
 numbers is static in C, 
