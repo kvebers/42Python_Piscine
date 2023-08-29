@@ -29,10 +29,10 @@ def main():
         GreySmooth.show()
     except FileNotFoundError:
         print(f"Error: File '{path}' not found.")
-    except Exception as e:
-        print(f"An error occurred: {e}")
     except AssertionError as error:
         print(AssertionError.__name__ + ":" + str(error))
+    except Exception as e:
+        print(f"An error occurred: {e}")
 
 
 if __name__ == "__main__":

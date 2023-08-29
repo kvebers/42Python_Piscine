@@ -102,9 +102,10 @@ Leaving Open only Blue channel
 def ft_grey(array) -> np.ndarray:
     try:
         newArray = array.copy()
-        newArray[:, :, 0] = (array[0:, :, 0] + array[0:, :, 1] + array[0:, :, 2]) / 3
-        newArray[:, :, 1] = (array[0:, :, 0] + array[0:, :, 1] + array[0:, :, 2]) / 3 
-        newArray[:, :, 2] = (array[0:, :, 0] + array[0:, :, 1] + array[0:, :, 2]) / 3 
+        # newArray[:, :, 0] = (array[0:, :, 0] + array[0:, :, 1] + array[0:, :, 2]) / 3
+        # newArray[:, :, 1] = (array[0:, :, 0] + array[0:, :, 1] + array[0:, :, 2]) / 3 
+        # newArray[:, :, 2] = (array[0:, :, 0] + array[0:, :, 1] + array[0:, :, 2]) / 3 
+        np.mean(newArray, axis=2)
         return (newArray)
     except FileNotFoundError:
         print(f"Error: File '{path}' not found.")
