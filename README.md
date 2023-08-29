@@ -61,4 +61,24 @@ Too Boring to Do
 
 ### Day01 ex00
 
-ls
+Modification of the data types and selection of specific data
+
+### Day01 ex01
+
+Removal of certain type of data from the data set
+
+### Day01 ex02
+
+Transfering image to a array of data
+
+### Day01 ex03
+
+Zooming in the image, croping image and resizing
+
+### Day01 ex04
+
+Rotation of the image
+
+### Day01 ex05
+
+editing the image according to the norms of the code
