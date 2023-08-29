@@ -14,7 +14,4 @@ def main():
     print(apply_limit(bmi, 26))
 
 if __name__ == "__main__":
-    try:
-        exit(main())
-    except AssertionError as error:
-        print(AssertionError.__name__ + ":" + str(error))
+    exit(main())

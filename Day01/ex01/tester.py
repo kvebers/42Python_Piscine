@@ -10,11 +10,6 @@ def main():
 
     print(slice_me(family, 0, 2))
     print(slice_me(family, 1, -2))
-    # print(slice_me(family, 1, -8))
-    # print(slice_me(test, 1, -8))
 
 if __name__ == "__main__":
-    try:
-        exit(main())
-    except AssertionError as error:
-        print(AssertionError.__name__ + ":" + str(error))
+    exit(main())
