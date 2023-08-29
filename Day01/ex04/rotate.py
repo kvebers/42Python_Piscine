@@ -15,7 +15,7 @@ def rotoate(image : Image):
         cropImage = image.crop(0, (height - width) / 2, width, height - (height - width) / 2)
     imageToArray = np.array(cropImage)
     rotated_image = np.transpose(imageToArray, (1, 0, 2))
-    rotated_image = np.flip(rotated_image, axis=0) 
+    rotated_image = np.flip(rotated_image, axis=0)
     rotImage = Image.fromarray(rotated_image)
     return rotImage
     
