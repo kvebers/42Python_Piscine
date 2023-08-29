@@ -13,7 +13,7 @@ def rotoate(image : Image):
         cropImage = image.crop(((width - height) / 2, 0, width - (width - height) / 2, height))
     else:
         cropImage = image.crop(0, (height - width) / 2, width, height - (height - width) / 2)
-    rotImage = cropImage.rotate(-90, expand=True)
+    rotImage = cropImage.rotate(90, expand=True)
     return rotImage
     
 
