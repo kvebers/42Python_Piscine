@@ -6,7 +6,7 @@ WOW JUST COULD HAVE IMPORTED MORSE CODE I LOVE THESE RULES...
 
 """
 
-MORSE_CODE = {
+NESTED_CODE = {
     " ": "/ ",
     "A": ".- ",
     "B": "-... ",
@@ -53,10 +53,13 @@ def main():
     
     code = []
     for char in sys.argv[1].upper():
-        if (char in MORSE_CODE):
-            code.append(MORSE_CODE[char])
+        if (char in NESTED_CODE):
+            code.append(NESTED_CODE[char])
         else:
             raise AssertionError(f" This bad boy char is invalid {char}")
+    """
+    joins the list elements into a string elemenets
+    """
     print("".join(code))
     return (0)
 
