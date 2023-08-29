@@ -22,26 +22,26 @@ def main():
         image = Image.open(path)
         newImage = zoom_image(image)
         print(f"New shape after \"zooming\": {np.array(newImage).shape}")
-        fig, ax = plt.subplots()
-        ax.imshow(np.array(newImage))
-        """
-        DISPLAYS THE IMAGES, NEEDED TO USE PLT because Python is awesome
-        """
-        ax.set_title("Zoomed and Scaled Image")
-        ax.set_xlabel("X Axis")
-        ax.set_ylabel("Y Axis")
-        """
-        I honestly do not know what they are asking here to print, but supposedly that is this
-        """
         print("This thing...")
         grayscale_image = newImage.convert("L")
+        """
+        THIS PRINTS OUT USLESS DATA
+        """
         grayscale_image_data = np.array(grayscale_image.getdata())
         for pixel_value in grayscale_image_data[:3]:
             print(f"[{pixel_value}]")
         print("...")
         for pixel_value in grayscale_image_data[-3:]:
             print(f"[{pixel_value}]")
-        newImage.show()
+        """
+        STOP OF PRINTING USLESS DATA
+        """
+        fig, ax = plt.subplots()
+        ax.imshow(np.array(grayscale_image), cmap='gray')
+        ax.set_title("Zoomed and Scaled Image")
+        ax.set_xlabel("X Axis")
+        ax.set_ylabel("Y Axis")
+        grayscale_image.show()
         image.show()
         plt.show()
     except FileNotFoundError:

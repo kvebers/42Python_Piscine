@@ -13,7 +13,12 @@ def rotoate(image : Image):
         cropImage = image.crop(((width - height) / 2, 0, width - (width - height) / 2, height))
     else:
         cropImage = image.crop(0, (height - width) / 2, width, height - (height - width) / 2)
-    rotImage = cropImage.rotate(90, expand=True)
+    imageToArray = np.array(cropImage)
+    rotated_image = np.transpose(imageToArray, (1, 0, 2))
+    rotated_image = np.flip(rotated_image, axis=0) 
+    # rotImage = cropImage.rotate(90, expand=True)
+    # # rotImage = cropImage.rotate(90, expand=True)
+    rotImage = Image.fromarray(rotated_image)
     return rotImage
     
 
