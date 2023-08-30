@@ -1,6 +1,7 @@
 import csv
 from typing import List
 
+
 def load(path: str) -> List[List[str]]:
     try:
         with open(path, 'r') as f:
@@ -9,7 +10,6 @@ def load(path: str) -> List[List[str]]:
             for row in reader:
                 data.append(row)
             print(f"Dataset dimensions: {len(data)} rows x {len(data[0])} columns")
-            print (data)
             return data
     except FileNotFoundError:
         print(f"Error: File '{path}' not found.")
