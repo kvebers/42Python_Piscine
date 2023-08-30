@@ -1,7 +1,9 @@
 import csv
 from typing import List
+import pandas as pd
 
-def load(path: str) -> List[List[str]]:
+
+def load(path: str) -> pd.DataFrame:
     try:
         with open(path, 'r') as f:
             reader = csv.reader(f)
@@ -9,8 +11,8 @@ def load(path: str) -> List[List[str]]:
             for row in reader:
                 data.append(row)
             print(f"Dataset dimensions: {len(data)} rows x {len(data[0])} columns")
-            print (data)
-            return data
+            dataPrint = pd.read_csv(path)
+            return dataPrint
     except FileNotFoundError:
         print(f"Error: File '{path}' not found.")
     except csv.Error as e:
