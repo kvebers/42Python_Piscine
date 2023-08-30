@@ -8,16 +8,22 @@ def is_Germany(row):
 
 def main():
     try:
+        """
+        Preping the data set and selecting Germany and Years
+        """
         data = load("life_expectancy_years.csv")
         Germany = ft_filter(is_Germany, data)
         Germany = Germany[0][1:]
         Years = data[0]
         Years = Years[1:]
-        print(Germany)
-        print(Years)
+        """
+        Just ploting the values against the data
+        """
         plt.plot(Years, Germany,'r')
         plt.xlabel("Years")
         plt.ylabel("Life Expectancy")
+        plt.xticks(Years[::50])
+        plt.yticks(Germany[::50])
         plt.title("Life Expectancy in Germany Over the Years")
         plt.show()
     except FileNotFoundError:
