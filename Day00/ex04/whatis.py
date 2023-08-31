@@ -3,7 +3,7 @@ import sys
 
 def main():
     if len(sys.argv) != 2:
-        raise AssertionError(" more than one argument is provided")
+        raise AssertionError(" Incorrect Argument Count")
         return 1
     input_value = sys.argv[1]
     try:
