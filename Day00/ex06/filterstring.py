@@ -2,7 +2,8 @@ import sys
 from ft_filter import ft_filter
 
 
-def main():    
+def main():
+    """MAIN"""
     if (len(sys.argv) != 3):
         raise AssertionError(" Wrong number of arguments")
     else:
@@ -14,9 +15,7 @@ def main():
 
 
 if __name__ == "__main__":
-    """
-    Tries to execute the main on error exits with error message
-    """
+    """EXECUTE MAIN OR EXIT"""
     try:
         exit(main())
     except AssertionError as error:

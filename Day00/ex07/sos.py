@@ -3,7 +3,6 @@ import sys
 
 """
 WOW JUST COULD HAVE IMPORTED MORSE CODE I LOVE THESE RULES...
-
 """
 
 NESTED_CODE = {
@@ -50,7 +49,7 @@ NESTED_CODE = {
 def main():
     if (len(sys.argv) != 2):
         raise AssertionError(" Incorrect ammount of arguments")
-    
+
     code = []
     for char in sys.argv[1].upper():
         if (char in NESTED_CODE):
