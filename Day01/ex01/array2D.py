@@ -1,14 +1,15 @@
-"""
-DEVIDS THE ARRAY OF ELEMENTS IN HALF, A LOT OF ERROR HANDLING
-"""
 def slice_me(family: list, start: int, end: int) -> list:
     try:
+        """
+        DIVIDE THE ARRAY OF ELEMENTS IN HALF, \
+            A LOT OF ERROR HANDLING
+        """
         if (len(family) == 0):
             print("My shape is : (0, 0)")
             print("My new shape is : (0, 0)")
             return family
-        if (type(family) is not list or type(start) \
-        is not int or type(end) is not int):
+        if (type(family) is not list
+                or type(start) is not int or type(end) is not int):
             raise AssertionError("Check of the parameters in the list")
         leng = len(family[0])
         for each in family:

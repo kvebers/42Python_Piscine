@@ -1,8 +1,8 @@
 from load_image import ft_load
 from pimp_image import ft_blue, ft_red, ft_green
 from pimp_image import ft_invert, ft_grey
-import numpy as np
-from PIL import Image, ImageDraw, ImageFont
+from PIL import Image
+
 
 def main():
     try:
@@ -26,8 +26,6 @@ def main():
         BlueImage.show()
         OriginalImage.show()
         InvertedImage.show()
-    except FileNotFoundError:
-        print(f"Error: File '{path}' not found.")
     except AssertionError as error:
         print(AssertionError.__name__ + ":" + str(error))
     except Exception as e:
@@ -36,4 +34,3 @@ def main():
 
 if __name__ == "__main__":
     exit(main())
-    

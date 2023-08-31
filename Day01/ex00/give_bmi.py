@@ -1,10 +1,12 @@
-"""
-Calculates the BMI of the person list
-"""
-def give_bmi(height: list[int | float], weight: list[int | float]) -> list[int | float]:
+def give_bmi(height: list[int | float],
+             weight: list[int | float]) -> list[int | float]:
+    """
+    Calculates the BMI of the person list
+    """
     try:
         if (len(height) != len(weight)):
-            raise AssertionError(" The Hight and Weight lists are not the same size ")
+            raise AssertionError(" The Hight and Weight lists \
+                                 are not the same size ")
         amazing = weight + height
         for each in amazing:
             if (type(each) not in [float, int]):
@@ -20,10 +22,10 @@ def give_bmi(height: list[int | float], weight: list[int | float]) -> list[int |
     return []
 
 
-"""
-Check if the person is in the heatlh range or unhealth one
-"""
 def apply_limit(bmi: list[int | float], limit: int) -> list[bool]:
+    """
+    Check if the person is in the heatlh range or unhealth one
+    """
     try:
         for each in bmi:
             if (type(each) not in [float, int]):
