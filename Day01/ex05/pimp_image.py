@@ -73,17 +73,17 @@ def ft_grey(array) -> np.ndarray:
     """
     try:
         newArray = array.copy()
-        newArray[:, :, 0] = newArray[:, :, 0] / (1 / 0.2989)
-        newArray[:, :, 1] = newArray[:, :, 1] / (1 / 0.5870)
-        newArray[:, :, 2] = newArray[:, :, 2] / (1 / 0.1140)
-        # newArray[:, :, 0] = (newArray[0:, :, 0] + newArray[0:, :, 1]
-        #                      + newArray[0:, :, 2]) / 3
-        # newArray[:, :, 1] = (newArray[0:, :, 0] + newArray[0:, :, 1]
-        #                      + newArray[0:, :, 2]) / 3
-        # newArray[:, :, 2] = (newArray[0:, :, 0] + newArray[0:, :, 1]
-        #                      + newArray[0:, :, 2]) / 3
-        newArray[:, :, 1] = newArray[:, :, 0]
-        newArray[:, :, 2] = newArray[:, :, 0]
+        newArray[:, :, 0] = newArray[:, :, 0] / 1 / 0.2989
+        newArray[:, :, 1] = newArray[:, :, 1] / 1 / 0.5870
+        newArray[:, :, 2] = newArray[:, :, 2] / 1 / 0.1140
+        newArray[:, :, 0] = (newArray[0:, :, 0] + newArray[0:, :, 1]
+                             + newArray[0:, :, 2]) / 3
+        newArray[:, :, 1] = (newArray[0:, :, 0] + newArray[0:, :, 1]
+                             + newArray[0:, :, 2]) / 3
+        newArray[:, :, 2] = (newArray[0:, :, 0] + newArray[0:, :, 1]
+                             + newArray[0:, :, 2]) / 3
+        # newArray[:, :, 1] = newArray[:, :, 0]
+        # newArray[:, :, 2] = newArray[:, :, 0]
         return (newArray)
     except AssertionError as error:
         print(AssertionError.__name__ + ":" + str(error))

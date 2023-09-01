@@ -33,9 +33,9 @@ def apply_limit(bmi: list[int | float], limit: int) -> list[bool]:
         over = []
         for human in bmi:
             if (human > limit):
-                over.append("False")
-            else:
                 over.append("True")
+            else:
+                over.append("False")
         return over
     except AssertionError as error:
         print(AssertionError.__name__ + ":" + str(error))
