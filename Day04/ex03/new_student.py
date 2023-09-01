@@ -16,4 +16,8 @@ class Student:
     id: str = field(init=False, default_factory=generateID)
 
     def __post_init__(self):
+        if (len(self.name) == 0):
+            self.name = "ChillMan"
+        if (len(self.surname) == 0):
+            self.surname = "CoolGirl"
         self.login = self.name[0] + self.surname.lower()
