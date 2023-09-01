@@ -1,12 +1,11 @@
 from typing import Any
 
 
-def myRange(stop):
-    """EXECUTES EveryTime It is called from yield position"""
-    cnt = 0
-    while cnt < stop:
-        yield cnt
-        cnt += 1
+def mySum(list: list):
+    sum = 0
+    for amazing in list:
+        sum += amazing
+    return sum
 
 
 def myLen(list: list):
@@ -15,19 +14,6 @@ def myLen(list: list):
     for amazing in list:
         cnt += 1
     return cnt
-
-
-def fSort(list: list):
-    """Simple Sorting Algorithm"""
-    for cnt in myRange(myLen(list)):
-        minValue = cnt
-        for Index in myRange(cnt + 1, myLen(list)):
-            if list[Index] < list[minValue]:
-                minValue = Index
-        temp = list[cnt]
-        list[cnt] = list[minValue]
-        list[minValue] = temp
-    return list
 
 
 def calculateMedian(list: list):
@@ -56,19 +42,19 @@ def calculateQuartile(list: list):
         q3 = (list[Q3Index] + list[Q3Index + 1]) / 2
     else:
         q3 = list[Q3Index]
-    newList += q1
-    newList += q3
+    newList.append(q1)
+    newList.append(q3)
     print(newList)
 
 
 def calculateMean(list: list):
     """Calculates the average value"""
-    print(sum(list) / myLen(list))
+    print(mySum(list) / myLen(list))
 
 
 def calculateVar(list: list):
     """Calculates the average distance from mean"""
-    mean = sum(list) / myLen(list)
+    mean = mySum(list) / myLen(list)
     var = 0
     for x in list:
         var += (x - mean) ** 2
@@ -78,7 +64,7 @@ def calculateVar(list: list):
 
 def calculateStd(list: list):
     """Calculates the disperity of the data"""
-    mean = sum(list) / myLen(list)
+    mean = mySum(list) / myLen(list)
     var = 0
     for x in list:
         var += (x - mean) ** 2
@@ -93,44 +79,48 @@ def ft_statistics(*args: Any, **kwargs: Any) -> None:
         kwargs list takes only keys and string
         Then it dose appropriate calculatins
         depending from the functions selected"""
-    list = []
-    median = 0
-    mean = 0
-    quartile = 0
-    std = 0
-    var = 0
-    for var in args:
-        list.append(var)
-    for key, args in kwargs.items():
-        if (args == "median"):
-            median = 1
-        elif (args == "mean"):
-            mean = 1
-        elif (args == "quartile"):
-            quartile = 1
-        elif (args == "std"):
-            std = 1
-        elif (args == "var"):
-            var = 1
-    if (len(list) == 0):
+    try:
+        list = []
+        median = 0
+        mean = 0
+        quartile = 0
+        std = 0
+        var = 0
+        for var in args:
+            if type(var).__name__ == "int" or type(var).__name__ == "float":
+                list.append(var)
+        for key, args in kwargs.items():
+            if (args == "median"):
+                median = 1
+            elif (args == "mean"):
+                mean = 1
+            elif (args == "quartile"):
+                quartile = 1
+            elif (args == "std"):
+                std = 1
+            elif (args == "var"):
+                var = 1
+        if (myLen(list) == 0):
+            if (median == 1):
+                print("ERROR")
+            if (mean == 1):
+                print("ERROR")
+            if (quartile == 1):
+                print("ERROR")
+            if (std == 1):
+                print("ERROR")
+            if (var == 1):
+                print("ERROR")
+            return
         if (median == 1):
-            print("ERROR")
-        if (mean == 1):
-            print("ERROR")
+            calculateMedian(list)
         if (quartile == 1):
-            print("ERROR")
+            calculateQuartile(list)
+        if (mean == 1):
+            calculateMean(list)
         if (std == 1):
-            print("ERROR")
+            calculateStd(list)
         if (var == 1):
-            print("ERROR")
-        return
-    if (median == 1):
-        calculateMedian(list)
-    if (quartile == 1):
-        calculateQuartile(list)
-    if (mean == 1):
-        calculateMean(list)
-    if (std == 1):
-        calculateStd(list)
-    if (var == 1):
-        calculateVar(list)
+            calculateVar(list)
+    except Exception as e:
+        print(f"An error occurred: {e}")
