@@ -28,10 +28,10 @@ def main():
 
     except FileNotFoundError:
         print(f"Error: File '{path}' not found.")
-    except Exception as e:
-        print(f"An error occurred: {e}")
     except AssertionError as e:
         print(AssertionError.__name__ + ":" + str(e))
+    except Exception as e:
+        print(f"An error occurred: {e}")
 
 
 if __name__ == "__main__":
