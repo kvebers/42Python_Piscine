@@ -43,7 +43,9 @@ def main():
         plt.xlabel("Years")
         plt.ylabel("Population")
         plt.xticks(Years[::50])
-        plt.yticks((20, 40, 60, 80, 100))
+        customTicks = [20, 40, 60, 80, 100]
+        customLabels = ['20M', '40M', '60M', '80M', "100M"]
+        plt.yticks(customTicks, customLabels)
         plt.title("Population of France, Germany, Holy See and Latvia")
         plt.legend()
         plt.show()
