@@ -25,9 +25,6 @@ def main():
                 plt.annotate(country, (countIncome[i], lifeExp[i]))
         plt.legend()
         plt.show()
-
-    except FileNotFoundError:
-        print(f"Error: File '{path}' not found.")
     except AssertionError as e:
         print(AssertionError.__name__ + ":" + str(e))
     except Exception as e:
