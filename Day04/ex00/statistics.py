@@ -1,14 +1,43 @@
 from typing import Any
 
 
+def myRange(stop):
+    """EXECUTES EveryTime It is called from yield position"""
+    cnt = 0
+    while cnt < stop:
+        yield cnt
+        cnt += 1
+
+
+def myLen(list: list):
+    """My Length Function"""
+    cnt = 0
+    for amazing in list:
+        cnt += 1
+    return cnt
+
+
+def fSort(list: list):
+    """Simple Sorting Algorithm"""
+    for cnt in myRange(myLen(list)):
+        minValue = cnt
+        for Index in myRange(cnt + 1, myLen(list)):
+            if list[Index] < list[minValue]:
+                minValue = Index
+        temp = list[cnt]
+        list[cnt] = list[minValue]
+        list[minValue] = temp
+    return list
+
+
 def calculateMedian(list: list):
     """Calculates the medium value"""
     list.sort()
     median = 0
     if (len(list) % 2 == 1):
-        median = list[len(list) // 2 + 1]
+        median = list[myLen(list) // 2 + 1]
     else:
-        median = (list[len(list) // 2] + list[len(list) // 2 - 1]) / 2
+        median = (list[myLen(list) // 2] + list[myLen(list) // 2 - 1]) / 2
     print(median)
 
 
@@ -16,7 +45,7 @@ def calculateQuartile(list: list):
     """Calculates the 25% and 75% value"""
     list.sort()
     newList = []
-    leng = len(list)
+    leng = myLen(list)
     Q1Index = (leng - 1) // 4
     if leng % 4 == 0:
         q1 = (list[Q1Index] + list[Q1Index + 1]) / 2
@@ -27,33 +56,33 @@ def calculateQuartile(list: list):
         q3 = (list[Q3Index] + list[Q3Index + 1]) / 2
     else:
         q3 = list[Q3Index]
-    newList.append(q1)
-    newList.append(q3)
+    newList += q1
+    newList += q3
     print(newList)
 
 
 def calculateMean(list: list):
     """Calculates the average value"""
-    print(sum(list) / len(list))
+    print(sum(list) / myLen(list))
 
 
 def calculateVar(list: list):
     """Calculates the average distance from mean"""
-    mean = sum(list) / len(list)
+    mean = sum(list) / myLen(list)
     var = 0
     for x in list:
         var += (x - mean) ** 2
-    var = var / len(list)
+    var = var / myLen(list)
     print(var)
 
 
 def calculateStd(list: list):
     """Calculates the disperity of the data"""
-    mean = sum(list) / len(list)
+    mean = sum(list) / myLen(list)
     var = 0
     for x in list:
         var += (x - mean) ** 2
-    var = var / len(list)
+    var = var / myLen(list)
     std = var ** (0.5)
     print(std)
 
@@ -71,20 +100,18 @@ def ft_statistics(*args: Any, **kwargs: Any) -> None:
     std = 0
     var = 0
     for var in args:
-        if isinstance(var, (int, float)):
-            list.append(var)
+        list.append(var)
     for key, args in kwargs.items():
-        if isinstance(key, str):
-            if (args == "median"):
-                median = 1
-            elif (args == "mean"):
-                mean = 1
-            elif (args == "quartile"):
-                quartile = 1
-            elif (args == "std"):
-                std = 1
-            elif (args == "var"):
-                var = 1
+        if (args == "median"):
+            median = 1
+        elif (args == "mean"):
+            mean = 1
+        elif (args == "quartile"):
+            quartile = 1
+        elif (args == "std"):
+            std = 1
+        elif (args == "var"):
+            var = 1
     if (len(list) == 0):
         if (median == 1):
             print("ERROR")
