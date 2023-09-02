@@ -1,4 +1,4 @@
-from S1E9 import Character, Stark
+from S1E9 import Stark
 
 
 def main():
@@ -14,6 +14,7 @@ def main():
     Lyanna = Stark("Lyanna", False)
     print(Lyanna.__dict__)
     # hodor = Character("hodor") error
+
 
 if __name__ == "__main__":
     exit(main())

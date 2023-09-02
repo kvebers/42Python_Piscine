@@ -12,7 +12,8 @@ class Character(ABC):
     def die(self):
         """ Abstract method of the class file """
         pass
-    
+
+
 class Stark(Character):
     """ Class that inherits from GOT Chars """
     def die(self):

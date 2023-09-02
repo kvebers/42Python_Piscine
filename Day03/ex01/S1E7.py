@@ -17,11 +17,13 @@ class Baratheon(Character):
 
     def __str__(self):
         """RETURNS THE STRING REPRESENTATION OF SELF"""
-        return f"<Baratheon: {self.first_name} of Vector  ('{self.family_name}', '{self.eyes}', '{self.hairs}')>"
+        return f"<Baratheon: {self.first_name} of Vector \
+            ('{self.family_name}', '{self.eyes}', '{self.hairs}')>"
 
     def __repr__(self):
         """Just repeat of __Str__()"""
         return self.__str__()
+
 
 class Lannister(Character):
     """ Class that inherits from GOT Chars LANNISTER """
@@ -39,7 +41,8 @@ class Lannister(Character):
 
     def __str__(self):
         """RETURNS THE STRING REPRESENTATION OF SELF"""
-        return f"<Lanister: {self.first_name} of Vector  ('{self.family_name}', '{self.eyes}', '{self.hairs}')>"
+        return f"<Lanister: {self.first_name} of Vector \
+              ('{self.family_name}', '{self.eyes}', '{self.hairs}')>"
 
     def __repr__(self):
         """Just repeat of __Str__()"""
