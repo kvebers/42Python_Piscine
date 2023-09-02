@@ -11,6 +11,7 @@ def main():
     v3 = calculator([10.0, 15.0, 20.0])
     v3 - 5
     v3 / 5
+    v3 / 0
 
 
 if __name__ == "__main__":

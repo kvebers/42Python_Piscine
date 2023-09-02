@@ -5,7 +5,9 @@ class King(Baratheon, Lannister):
     def __init__(self, first_name, is_alive=True):
         """Specificly forcing it to inherit from
         Baratheon Can Change to Lanister for testing purposes"""
-        Baratheon.__init__(self, first_name, is_alive)
+        super().__init__(first_name, is_alive)
+        # Baratheon.__init__(self, first_name, is_alive)
+        # Lannister.__init__(self, first_name, is_alive)
 
     def set_eyes(self, color):
         """setter for eye color"""
