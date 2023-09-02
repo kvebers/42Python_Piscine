@@ -2,6 +2,7 @@ from typing import Any
 
 
 def mySum(list: list):
+    """MY SUM"""
     sum = 0
     for amazing in list:
         sum += amazing
@@ -20,7 +21,7 @@ def calculateMedian(list: list):
     """Calculates the medium value"""
     list.sort()
     median = 0
-    if (len(list) % 2 == 1):
+    if (myLen(list) % 2 == 1):
         median = list[myLen(list) // 2 + 1]
     else:
         median = (list[myLen(list) // 2] + list[myLen(list) // 2 - 1]) / 2
