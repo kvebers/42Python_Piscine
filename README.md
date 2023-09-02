@@ -85,3 +85,44 @@ Editing the color values of the image, we acces the array of the images and we m
 
 [:, :, 0] = 0 this indicates if we want to select rows, colums or arrays
 
+
+### Day02 ex00
+
+Just an import function from the panda library
+why panda is awesome, it is not complaing about the data set beeing wack, meanwhile np and list of list have diffrent problems, such as 
+np complains about data set
+list of list is hard to display on the grap
+
+### Day02 ex01
+
+Just a simple graph with plotting the data set
+
+### Day02 ex02
+
+Same excerise with more countries
+
+### Day02 ex03
+
+need to merge 2 datasets to find overlays and then to merge it
+
+### Day03 ex00
+
+Make the basic class with abstract value called Character
+Make a class Startk inheriting from the character
+
+### Day03 ex01 
+
+Make Lannister class and Baratheon class that inherits from the Character
+
+### Day03 ex02
+
+2 approaches dirrectly call and constructor or call and super() that specifies that you should use the function from the base inheritence class
+
+### Day03 ex03
+
+Just a simple calculator
+
+### Day03 ex04
+
+Simple calculator with extra steps
+
