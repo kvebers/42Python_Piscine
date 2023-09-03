@@ -9,6 +9,15 @@ def mySum(list: list):
     return sum
 
 
+def mySort(list):
+    """MySort"""
+    for amazing in range(myLen(list) - 1):
+        for sure in range(myLen(list) - amazing - 1):
+            if list[sure] > list[sure + 1]:
+                list[sure], list[sure + 1] = list[sure + 1], list[sure]
+    return list
+
+
 def myLen(list: list):
     """My Length Function"""
     cnt = 0
@@ -19,7 +28,7 @@ def myLen(list: list):
 
 def calculateMedian(list: list):
     """Calculates the medium value"""
-    list.sort()
+    list = mySort(list)
     median = 0
     if (myLen(list) % 2 == 1):
         median = list[myLen(list) // 2 + 1]
@@ -30,7 +39,7 @@ def calculateMedian(list: list):
 
 def calculateQuartile(list: list):
     """Calculates the 25% and 75% value"""
-    list.sort()
+    list = mySort(list)
     newList = []
     leng = myLen(list)
     Q1Index = (leng - 1) // 4
@@ -43,8 +52,7 @@ def calculateQuartile(list: list):
         q3 = (list[Q3Index] + list[Q3Index + 1]) / 2
     else:
         q3 = list[Q3Index]
-    newList.append(q1)
-    newList.append(q3)
+    newList = [q1, q3]
     print(newList)
 
 
@@ -87,9 +95,8 @@ def ft_statistics(*args: Any, **kwargs: Any) -> None:
         quartile = 0
         std = 0
         var = 0
-        for var in args:
-            if type(var).__name__ == "int" or type(var).__name__ == "float":
-                list.append(var)
+        list = [var for var in args if type(var).__name__ == "int"
+                or type(var).__name__ == "float"]
         for key, args in kwargs.items():
             if (args == "median"):
                 median = 1
