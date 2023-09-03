@@ -17,7 +17,7 @@ class Student:
 
     def __post_init__(self):
         if (len(self.name) == 0):
-            self.name = "ChillMan"
+            self.name = "Plz"
         if (len(self.surname) == 0):
-            self.surname = "CoolGirl"
+            self.surname = "Stop"
         self.login = self.name[0] + self.surname.lower()
